@@ -8,10 +8,15 @@
 // 
 #include "CustomListViewData.generated.h"
 
+class UUserWidget;
+
 UCLASS()
 class LISTVIEWSAMPLE_API UCustomListViewData : public UDataAsset
 {
 	GENERATED_BODY()
+
+public:
+	TSubclassOf<UUserWidget> GetEntryClassByItem(UObject* Item);
 	
 protected:
 	// Item¹ïÀ³ªºEntryWidget
